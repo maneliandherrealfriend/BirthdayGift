@@ -32,7 +32,7 @@ var waves = 0;
 var ampWaves = 0;
 
 function preload(){
-    soundFile = loadSound('heartbeat.mp3');
+    soundFile = loadSound('Maneli beat.mp3');
     back = loadSound('2.wav');
 }
 
@@ -44,6 +44,7 @@ function setup() {
   amplitude = new p5.Amplitude();
   soundFile.loop();
   back.loop();
+  soundFile.setVolume(0.4);
   createCanvas(windowWidth,windowHeight);
   background(51);
 	
@@ -106,7 +107,7 @@ function draw() {
     let level = amplitude.getLevel();
     if(count>10){
             back.setVolume(backVolume);
-            if(backVolume<=0.3){
+            if(backVolume<=0.4){
             backVolume+=0.0005;
         }
 }else{
